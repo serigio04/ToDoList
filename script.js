@@ -9,7 +9,7 @@
     const list = document.querySelector('[data-list]');
     const task = document.createElement("li");
     task.classList.add("card");
-    input.value = " ";
+    value = " ";
     //backlist
     const taskContent = document.createElement("div");
     taskContent.appendChild(checkComplete());
@@ -22,6 +22,9 @@
     task.appendChild(deleteBtn());
     list.appendChild(task);
   }
+  
+  btn.addEventListener('click', createTask);
+
   const checkComplete = () => {
     const i = document.createElement("i");
     i.classList.add('far', 'fa-check-square', 'icon');
@@ -36,8 +39,6 @@
     const spanElement = element.parentElement.querySelector(".task");
     spanElement.classList.toggle("finish__task");
   }
-  //arrow function o funciones anonimas
-  btn.addEventListener('click', createTask);
 
   const deleteBtn = () => {
     const i = document.createElement('i');
@@ -50,24 +51,4 @@
     parent.remove();
   }
 })();
-
-//( () => {
-  //   const Btn = document.querySelector('[data-form-btn]');
-  //   //crear elemento en la lista
-  //   const createTask = (e) => {
-      
-  //     const input = document.querySelector("[data-form-input]");
-  //     const value = input.value
-  //     const list = document.querySelector('[data-list]');
-  //     const task = document.createElement("li");
-  //     task.classList.add("card");
-  //     const div = document.createElement("div");
-  //     const tarea = document.createElement("p")
-  //     tarea.classList.add("task");
-  //     tarea.innerText = value;
-  //     div.appendChild(tarea);
-  
-  //   }
-  
-  // })();
   
