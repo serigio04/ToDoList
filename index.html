@@ -26,13 +26,21 @@
             <input
               type="text"
               name="task"
-              placeholder="Nombre de la tarea"
+              placeholder="Task name"
               class="inputForm"
               autocomplete="off"
               data-form-input
             />
+            <div class="form_priority">
+              <span id="Priority_label">Priority: </span>
+              <select id="Priority" data-form-priority>
+                <option value="1" selected>High</option>
+                <option value="2">Middle</option>
+                <option value="3">Low</option>
+              </select>
+            </div>
             <button type="submit" class="btnCreate" data-form-btn>
-              Agregar <i class="fas fa-plus-circle"></i>
+              Add <i class="fas fa-plus-circle"></i>
             </button>
           </form>
         </div>
