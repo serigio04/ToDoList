@@ -14,12 +14,14 @@
     const taskContent = document.createElement("div");
     taskContent.appendChild(checkComplete());
     const tittleTask = document.createElement("span");
+    const div_priority = document.createElement("div");
     tittleTask.classList.add("task");
     tittleTask.innerHTML = value;
     taskContent.appendChild(tittleTask)
     task.appendChild(taskContent);
-    task.appendChild(addPriority())
-    task.appendChild(deleteBtn());
+    div_priority.appendChild(addPriority())
+    div_priority.appendChild(deleteBtn());
+    task.appendChild(div_priority)
     list.appendChild(task);
   }
   
@@ -28,22 +30,25 @@
   const addPriority = () =>{
     const Select_priority = document.querySelector('[data-form-priority]');
     const priority = Number(Select_priority.value)
+    const priText = document.createElement("span")
     let level
     switch (priority){
       case 1:
         level = "High"
+        priText.classList.add("high")
         break
       case 2:
         level = "Middle"
+        priText.classList.add("middle")
         break
       case 3: 
         level = "Low"
+        priText.classList.add("low")
         break
       default:
         level = "un"
         break
     }
-    const priText = document.createElement("span")
     priText.innerText = level
     return priText 
   }

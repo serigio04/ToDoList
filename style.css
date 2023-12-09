@@ -136,3 +136,20 @@ form {
 .finish__task{
   text-decoration: solid 2px line-through;
 }
+.high{
+  background-color: lightcoral;
+  padding: 0 1rem;
+  margin-right: 2rem;
+}
+
+.middle{
+  background-color: lightgoldenrodyellow;
+  padding: 0 1rem;
+  margin-right: 2rem;
+}
+
+.low{
+  background-color: lightgreen;
+  padding: 0 1rem;
+  margin-right: 2rem;
+}
