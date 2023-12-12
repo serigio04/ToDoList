@@ -132,8 +132,8 @@ form {
 .noTasks {
   font-size: 48px;
 }
-
 .finish__task{
+  font-weight: bold;
   text-decoration: solid 2px line-through;
 }
 .high{
