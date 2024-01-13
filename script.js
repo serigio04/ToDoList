@@ -74,9 +74,12 @@
     i.addEventListener('click', deleteTask)
     return i 
   }
+
   const deleteTask = (e) => {
-    const parent = e.target.parentElement;
-    parent.remove();
+    const task = e.target.closest('li');
+    if (task) {
+      task.remove();
+    }
   }
 })();
   
